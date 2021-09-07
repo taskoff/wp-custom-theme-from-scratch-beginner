@@ -45,3 +45,16 @@ function marchos_theme_setup() {
 }
 
 add_action('after_setup_theme', 'marchos_theme_setup');
+
+
+add_filter ( 'nav_menu_css_class', 'so_37823371_menu_item_class', 10, 4 );
+
+function so_37823371_menu_item_class ( $classes, $item, $args, $depth ){
+  $classes[] = 'nav-item';
+  return $classes;
+}
+
+function add_menuclass($ulclass) {
+    return preg_replace('/<a /', '<a class="nav-link"', $ulclass);
+ }
+ add_filter('wp_nav_menu','add_menuclass');
