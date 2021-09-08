@@ -1,3 +1,24 @@
 // @import './scss/_general-reset.scss';
 @import './scss/_header.scss';
+@import './scss/_footer.scss';
 
+.post-wrapper {
+    .img-wrapper {
+        img {
+            max-width: 100%;
+            height: 300px;
+        }
+    }
+}
+
+.post-header {
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
+.post-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+}
