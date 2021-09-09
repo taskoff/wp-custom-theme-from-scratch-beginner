@@ -59,8 +59,10 @@ function add_menuclass($ulclass) {
  }
  add_filter('wp_nav_menu','add_menuclass');
 
-//  ============= Add Post Tumbnails =====================  
+//  ============= Theme Support =====================  
+
 add_theme_support('post-thumbnails');
+add_theme_support('html5',array('search-form'));
 
 //  ============= Register Sidebar and Widget Area ===================== 
 
@@ -100,3 +102,6 @@ function marchos_custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_length', 'marchos_custom_excerpt_length', 999 );
+
+
+
