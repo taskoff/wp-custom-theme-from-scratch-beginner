@@ -103,5 +103,9 @@ function marchos_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'marchos_custom_excerpt_length', 999 );
 
+//  ============= Hide WP Version in Head =====================
 
-
+function marchos_remove_version() {
+	return '';
+}
+add_filter('the_generator', 'marchos_remove_version');
