@@ -10,7 +10,7 @@ get_header() ?>
     <?php 
        $lastBlog = new WP_Query(array(
            'type'=>'post',
-           'post_per_page'=>3
+           'posts_per_page'=>'3'
 
        )); ?>
        <?php if($lastBlog->have_posts()):?>
@@ -21,7 +21,7 @@ get_header() ?>
            </div>
        <?php endif; ?>
 
-    <php wp_reset_postdata (); ?>
+    <php wp_reset_postdata(); ?>
 
     <div class="categories-wrapper row">
         <?php

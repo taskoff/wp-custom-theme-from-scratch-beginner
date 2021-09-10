@@ -24,4 +24,8 @@ footer {
   padding-left: 0;
   padding-right: 0;
 }
+
+.unknown-page-wrapper {
+  min-height: 90vh;
+}
 /*# sourceMappingURL=my-custom-style.css.map */
