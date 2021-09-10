@@ -109,3 +109,87 @@ function marchos_remove_version() {
 	return '';
 }
 add_filter('the_generator', 'marchos_remove_version');
+
+//  ============= ADD Custom Post Type =====================
+
+// function marchos_add_custom_post_type() {
+
+// 	$labels = array(
+// 		'name' => 'Проекти',
+// 		'singular_name' => 'Проекти',
+// 		'add_new' => 'Добави нов',
+// 		'all_items' => 'Всички проекти',
+// 		'add_new_item' => 'Добави Нов Проект',
+// 		'edit_item' => 'Редактирай',
+// 		'new_item' => 'Нов проект',
+// 		'view_item' => 'Виж проект',
+// 		'search_item' => 'Търси проект',
+// 		'not_found' => 'Няма намерени',
+// 		'not_found_in_trash' => 'No items found in trash',
+// 		'parent_item_colon' => 'Parent Item'
+// 	);
+
+// 	$args = array(
+// 		'labels' => $labels,
+// 		'public' => true,
+// 		'has_archive' => true,
+// 		'publicly_queryable' => true,
+// 		'query_var' => true,
+// 		'rewrite' => true,
+// 		'capability_type' => 'post',
+// 		'hierarchical' => false,
+// 		'supports' => array(
+// 			'title',
+// 			'editor',
+// 			'excerpt',
+// 			'thumbnail',
+// 			'revisions',
+// 		),
+// 		'menu_position' => 3,
+// 		'exclude_from_search' => false 
+// 	);
+
+// 		register_post_type('проекти',$args);
+
+// }
+// add_action('init','marchos_add_custom_post_type');
+
+function awesome_custom_post_type (){
+	
+	$labels = array(
+		'name' => 'Проекти',
+		'singular_name' => 'Проекти',
+		'add_new' => 'Добави нов',
+		'all_items' => 'Всички',
+		'add_new_item' => 'Добави',
+		'edit_item' => 'Редактирай',
+		'new_item' => 'Нов',
+		'view_item' => 'Виж',
+		'search_item' => 'Search Portfolio',
+		'not_found' => 'No items found',
+		'not_found_in_trash' => 'No items found in trash',
+		'parent_item_colon' => 'Parent Item'
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'has_archive' => true,
+		'publicly_queryable' => true,
+		'query_var' => true,
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'supports' => array(
+			'title',
+			'editor',
+			'excerpt',
+			'thumbnail',
+			'revisions',
+		),
+		//'taxonomies' => array('category', 'post_tag'),
+		'menu_position' => 5,
+		'exclude_from_search' => false
+	);
+	register_post_type('portfolio',$args);
+}
+add_action('init','awesome_custom_post_type');
