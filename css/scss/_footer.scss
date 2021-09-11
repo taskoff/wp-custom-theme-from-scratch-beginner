@@ -1,3 +1,39 @@
 footer {
-    background-color: azure;
+    // background-color: azure;
+    border-top: solid 5px #EFEFEF;
+}
+.footer-items-wrapper {
+    padding: 30px;
+}
+
+.menu-footer-menu-container {
+    .menu {
+        list-style: none;
+        padding-left: 0;
+       .nav-link {
+           padding: 2px 0;
+           color: grey;
+           font-size: 14px;
+           &:hover {
+               color: black;
+           }
+       }
+    }
+}
+
+.contacts-wrapper {
+    p {
+        margin-bottom: 0;
+        font-size: 14px;
+        color: grey;
+    }
+}
+
+.bottom-footer-wrapper {
+    background-color: #EFEFEF;
+    p {
+        margin-bottom: 0;
+        padding: 10px 0;
+        color: grey;
+    }
 }
