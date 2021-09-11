@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
 // @import './scss/_general-reset.scss';
 @import './scss/_header.scss';
 @import './scss/_footer.scss';
 @import './scss/_front_page.scss';
 
+body {
+    
+        font-family: 'Ubuntu', sans-serif !important;
+   
+}
 
 .post-wrapper {
     .img-wrapper {

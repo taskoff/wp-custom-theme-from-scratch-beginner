@@ -41,6 +41,7 @@ get_header() ?>
     </div>
 </div>
 <div class="last-post-wrapper container">
+    <h2>Последни новини</h2>
     <?php 
        $lastBlog = new WP_Query(array(
            'type'=>'post',
@@ -48,7 +49,7 @@ get_header() ?>
 
        )); ?>
        <?php if($lastBlog->have_posts()):?>
-           <div class="row">
+           <div class="row justify-content-between">
                <?php while($lastBlog->have_posts()): $lastBlog->the_post(); ?>
                    <?php get_template_part('content', 'archive'); ?>           
                <?php  endwhile; ?>
