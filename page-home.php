@@ -19,14 +19,14 @@ get_header() ?>
                     <img src="<?php echo get_template_directory_uri() . "'/img/slide-2.jpg'" ?>" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h2>Нашето невероятно <span>заглавие</span></h2>
-                      <p>Some representative placeholder content for the second slide.</p>
+                      <p>Тук има много заинтригуващ текст под заглавието.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                 <img src="<?php echo get_template_directory_uri() . "'/img/slide-4.jpg'" ?>" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h2>Второ невероятно <span>заглавие</span></h2>
-                  <p>Some representative placeholder content for the third slide.</p>
+                  <p>Тук има много заинтригуващ текст под заглавието.</p>
                   </div>
             </div>
         </div>
@@ -39,6 +39,27 @@ get_header() ?>
                 <span class="visually-hidden">Next</span>
             </button>
     </div>
+</div>
+<div class="our-portfolio-wrapper container">
+    <h2>Най-нови проекти</h2>
+        <?php 
+        $args = array('post_type' => 'portfolio', 'post_per_page' => 4 );
+        $loop = new WP_Query( $args );
+        
+        if( $loop->have_posts() ): ?>
+            <div class="row">
+                <?php while( $loop->have_posts() ): $loop->the_post(); ?>
+                
+                    <?php get_template_part('content', 'archive-portfolio'); ?>
+            
+                <?php endwhile; ?>
+            </div>
+        <?php endif;
+            
+        wp_reset_postdata();
+            
+        ?>   
+            
 </div>
 <div class="last-post-wrapper container">
     <h2>Последни новини</h2>

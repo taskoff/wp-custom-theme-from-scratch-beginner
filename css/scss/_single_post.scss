@@ -1,0 +1,40 @@
+.single-post-body {
+    padding: 100px 0;
+}
+.main-post-wrapper {
+    padding-right: 40px;
+    border-right: 5px solid rgb(228, 227, 227);
+    .title-wrapper {
+        margin-top: 20px;
+    }
+    a {
+        text-decoration: none;
+    }
+
+    small {
+        display: block;
+        a {
+            color: grey;
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}
+
+.pagination-wrapper {
+    margin: 50px 0;
+}
+.comment-form-comment {
+    label {
+        display: block;
+    }
+}
+
+.comment-wrapper {
+    h3{
+        // color: grey;
+        font-size: 26px;
+    }
+}
+

@@ -1,4 +1,4 @@
-<div class="post-wrapper col-md-4">
+<div class="post-wrapper col-md-3">
     <div class="img-wrapper">
         <?php 
         echo '<a href="'.esc_url(get_permalink()).'" rel="lightbox">'; 

@@ -4,6 +4,12 @@
 @import './scss/_header.scss';
 @import './scss/_footer.scss';
 @import './scss/_front_page.scss';
+@import './scss/_post_archive.scss';
+@import './scss/_single_post.scss';
+@import './scss/_contact_page.scss';
+
+
+
 
 body {
     
@@ -36,3 +42,37 @@ body {
     min-height: 90vh;
 }
 
+h1, h2, h3, h4, h5 {
+    display: inline-block;
+    position: relative;
+    &::after {
+        display: block;
+        content: '';
+        width: 1em;
+        height: 0.1em;
+        background-color: black;
+        position: absolute;
+        top: 98%;
+        right: 0;
+    }
+}
+
+.sidebar-wrapper {
+    h4 {
+        padding-top: 20px;
+    }
+    ul {
+        list-style: none;
+        a {
+            text-decoration: none;
+            color: grey;
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}
+
+.result-page-main {
+    padding: 100px 0;
+}

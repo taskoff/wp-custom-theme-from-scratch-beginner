@@ -28,7 +28,9 @@ footer {
         color: grey;
     }
 }
-
+.wp-block-social-links .wp-social-link a {
+    padding: 0;
+}
 .bottom-footer-wrapper {
     background-color: #EFEFEF;
     p {

@@ -20,22 +20,7 @@ function marchos_scripts_enqueue () {
 
 add_action('wp_enqueue_scripts', 'marchos_scripts_enqueue');
 
-    //  ===== jQuary in the footer
-
-// function marchos_jquery_add_footer()
-// {
-//     wp_dequeue_script('jquery');
-//     wp_dequeue_script('jquery-core');
-//     wp_dequeue_script('jquery-migrate');
-//     wp_enqueue_script('jquery', false, array(), false, true);
-//     wp_enqueue_script('jquery-core', false, array(), false, true);
-//     wp_enqueue_script('jquery-migrate', false, array(), false, true);
-//     //  ====== add custom-js
-//     wp_enqueue_script('boostrapjs', get_template_directory_uri() . './js/bootstrap.min.js', array(), '1.0.0', true);
-//     wp_enqueue_script('customjs', get_template_directory_uri() . './js/my-scripts.js', array(), '1.0.0', true);
-// }
-// add_action('wp_enqueue_scripts', 'marchos_jquery_add_footer');
-
+   
 //  ============= Add Menus ===================== 
 
 function marchos_theme_setup() {
@@ -100,7 +85,7 @@ add_action('widgets_init','marchos_widget_setup');
 //  ============= Correct Excerpt lenght And remove [...]===================== 
 
 function marchos_custom_excerpt_length( $length ) {
-    return 20;
+    return 18;
 }
 add_filter( 'excerpt_length', 'marchos_custom_excerpt_length', 999 );
 

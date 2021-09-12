@@ -23,7 +23,7 @@
             display: block;
             content: '';
             width: 30px;
-            height: 5px;
+            height: 0.15em;
             background-color: black;
             position: absolute;
             top: 100%;
@@ -36,7 +36,8 @@
     }
 }
 
-.last-post-wrapper {
+.last-post-wrapper,
+.our-portfolio-wrapper {
     padding: 100px 0;
     .post-wrapper {
         padding: 10px;
@@ -57,12 +58,15 @@
     h4 {
         a {
             color: black;
+            font-weight: 400;
+            font-size: 22px;
             &:hover {
                 color: grey;
             }
         }
     }
     small {
+        display: block;
         a {
             color: grey;
             &:hover {
@@ -79,5 +83,10 @@
     }
     p {
         margin-bottom: 0;
+        font-size: 14px;
     }
+}
+
+.last-post-wrapper {
+    padding-top: 0;
 }

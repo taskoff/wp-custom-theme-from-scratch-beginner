@@ -1,0 +1,30 @@
+.contact-hero-section {
+    margin-top: 100px;
+}
+.form-and-sidebar-wrapper {
+    padding-top: 100px;
+    .form-wrapper {
+        textarea {
+            width: 500px;
+            height: 100px;
+        }
+        input {
+            width: 500px;
+        }
+    }
+    
+    p {
+        margin-bottom: 0;
+    }
+    .contacts-box {
+        margin-bottom: 20px;
+    }
+     
+}
+
+.map-wrapper {
+    margin: 50px 0;
+    iframe {
+        width: 100%;
+    }
+}

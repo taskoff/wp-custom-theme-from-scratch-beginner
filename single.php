@@ -1,8 +1,8 @@
 <?php get_header(); ?>
-<div class="container">
+<div class="single-post-body container">
     <div class="row">
         
-        <div class="col-xs-12 col-sm-8">
+        <div class="main-post-wrapper col-xs-12 col-sm-8">
             
             <?php 
             
@@ -16,10 +16,12 @@
                         
                         <?php if( has_post_thumbnail() ): ?>
                             
-                            <div class="d-flex justify-content-center"><?php the_post_thumbnail('medium'); ?></div>
+                            <div class="d-flex justify-content-center"><?php the_post_thumbnail('large'); ?></div>
                     
                         <?php endif; ?>
-                        <?php the_title('<h1 class="entry-title text-center">','</h1>' ); ?>
+                        <div class="title-wrapper text-center">
+                            <?php the_title('<h1 class="entry-title text-center">','</h1>' ); ?>
+                        </div>
                         
                         <small><?php the_category(' '); ?> / 
                             <?php if(has_tag()):  the_tags('') ;?>  /
@@ -31,19 +33,21 @@
                         
                         <hr>
                         
-                        <div class="d-flex justify-content-between">
+                        <div class="pagination-wrapper d-flex justify-content-between">
                             <div class="col-xs-6"><?php previous_post_link(); ?></div>
                             <div class="col-xs-6 text-right"><?php next_post_link(); ?></div>
                         </div>
                         
-                        <?php 
-                            if( comments_open() ){ 
-                                comments_template(); 
-                            } else {
-                                echo '<h5 class="text-center">Коментарите са затворени!</h5>';
-                            }
-                            
-                         ?>
+                        <div class="comment-wrapper">
+                            <?php 
+                                if( comments_open() ){ 
+                                    comments_template(); 
+                                } else {
+                                    echo '<h5 class="text-center">Коментарите са затворени!</h5>';
+                                }
+
+                             ?>
+                        </div>
                     
                     </article>
     
@@ -55,7 +59,7 @@
         
         </div>
         
-        <div class="col-xs-12 col-sm-4">
+        <div class="sidebar-wrapper col-xs-12 col-sm-4">
             <?php get_sidebar(); ?>
         </div>
         

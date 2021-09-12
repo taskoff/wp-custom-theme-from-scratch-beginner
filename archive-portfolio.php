@@ -1,8 +1,8 @@
 <?php
 get_header(); ?>
-<div class="container">
+<div class="our-portfolio-wrapper container">
     <header>
-        <h1><?php the_archive_title(); ?></h1>
+        <h1><?php echo post_type_archive_title( '', false ); ?></h1>
         <p><?php the_archive_description(); ?></p>
     
     </header>
@@ -10,7 +10,7 @@ get_header(); ?>
     <div class="row">
         <?php while( have_posts() ): the_post(); ?>
                             
-            <?php get_template_part('content', 'archive'); ?>
+            <?php get_template_part('content', 'archive-portfolio'); ?>
         
         <?php endwhile; ?>
     </div>

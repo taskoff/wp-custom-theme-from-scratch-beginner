@@ -1,8 +1,8 @@
 <?php get_header(); ?>
-<div class="container">
+<div class="result-page-main container">
     <div class="row">
         
-        <div class="col-xs-12 col-sm-8">
+        <div class="all-results-wrapper col-xs-12 col-sm-8">
             
             <div class="row">
     
@@ -13,6 +13,7 @@
                 while( have_posts() ): the_post(); ?>
                     
                     <?php get_template_part('content', 'search'); ?>
+                    <hr>
                 
                 <?php endwhile;
                 
@@ -23,7 +24,7 @@
         
         </div>
         
-        <div class="col-xs-12 col-sm-4">
+        <div class="sidebar-wrapper col-xs-12 col-sm-4">
             <?php get_sidebar(); ?>
         </div>
         

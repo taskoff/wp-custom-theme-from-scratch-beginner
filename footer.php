@@ -20,6 +20,7 @@
                             <p>Благоевград 2700</p>  
                             <p>test@email.com</p>                      </div>
                         <div class="col-xs-12 col-sm-3">
+                            <h5>Последвайте ни</h5>
                             <?php get_sidebar('footer-widget-area'); ?>
                         </div>
 
