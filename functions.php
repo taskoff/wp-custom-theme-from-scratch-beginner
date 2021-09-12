@@ -142,3 +142,6 @@ function awesome_custom_post_type (){
 	register_post_type('portfolio',$args);
 }
 add_action('init','awesome_custom_post_type');
+
+
+// require get_template_directory() . '/inc/walker-class.php';

@@ -1,25 +1,28 @@
-<?php
-get_header(); ?>
-<div class="container">
-    <header>
-        <h1><?php the_archive_title(); ?></h1>
-        <p><?php the_archive_description(); ?></p>
-    
-    </header>
-    <?php if(have_posts()): ?>
-    <div class="row">
-        <?php while( have_posts() ): the_post(); ?>
-                            
-            <?php get_template_part('content', 'archive'); ?>
-        
-        <?php endwhile; ?>
+<?php get_header(); ?>
+<div class="post-archive-main container">
+    <div class="all-posts-wrapper">
+        <div class="row">
+            <div class="posts-wrapper col-xs-12 col-sm-9">
+                <?php 
+                if(have_posts()):
+                    while(have_posts()): the_post(); ?>
+                    <div class="post-wrapper row">
+
+                    <?php get_template_part('content', 'archive-post'); ?>
+
+                    </div>
+                    <hr>
+                    <?php endwhile ?>
+                    <?php endif ?>
+            </div>
+                
+            <div class="sidebar-wrapper col-xs-12 col-sm-3">
+                <?php get_sidebar(); ?>
+            </div>
+        </div>
     </div>
-    <?php endif; ?>
-    <div class="col-xs-12 text-center">
-		<?php the_posts_navigation(); ?>
-	</div>
 </div>
 
 
 
-<?php get_footer();
+<?php get_footer(); ?>

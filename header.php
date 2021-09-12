@@ -29,7 +29,9 @@
                             <?php wp_nav_menu(array(
                             'theme_location'=>'primary',
                             'container'=>false,
-                            'menu_class'=>'navbar-nav ms-auto mb-2 mb-lg-0')); ?>
+                            'menu_class'=>'navbar-nav ms-auto mb-2 mb-lg-0',
+							// 'walker' => new Walker_Nav_Primary()
+                                )); ?>
                  
                         </div>
                     </div>

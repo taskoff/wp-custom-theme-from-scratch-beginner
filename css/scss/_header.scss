@@ -20,10 +20,42 @@
         height: 50px;
     }
 }
-
-.menu-primary-menu-container ul {
-    list-style: none;
+.navbar-collapse {
+    ul {
+        list-style: none;
+        padding-left: 0;
+        background-color: #ffffff;
+    }
 }
+ul.navbar-nav {
+    list-style: none;
+    li.nav-item {
+        position: relative;
+        &>ul {
+            position: absolute;
+            top: 100%;
+            visibility: hidden;
+            min-width: 200px;
+            opacity: 0;
+            transition: visibility 0.4s ease,  opacity 0.4s ease;
+            li {
+                background-color: white;
+                transition: background-color 0.5s ease;
+                &:hover {
+                    background-color: burlywood;
+                }
+            }
+        }
+        &:hover>ul {
+            visibility: visible;
+            opacity: 1;
+        }
+        }
+    }
+   
+
+
+
 
 .navbar-light .navbar-nav .nav-link {
     color: black;

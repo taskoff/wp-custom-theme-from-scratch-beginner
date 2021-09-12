@@ -40,3 +40,17 @@
 .sidebar-wrapper {
     padding-left: 40px;
 }
+
+.post-wrapper {
+    .post-img-wrapper {
+        overflow: hidden;
+
+    }
+    img {
+        transform: scale(1.3);
+            transition: transform 0.7s;
+            &:hover {
+                transform: scale(1);
+            }
+    }
+}

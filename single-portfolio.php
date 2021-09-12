@@ -38,7 +38,7 @@
                             <div class="col-xs-6 text-right"><?php next_post_link(); ?></div>
                         </div>
                         
-                       
+							
                     
                     </article>
     
